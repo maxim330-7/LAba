@@ -1,0 +1,81 @@
+\documentclass[a4paper, 14pt]{article} 
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc} 
+\usepackage[english, russian]{babel}  
+\usepackage[top = 20 mm, 
+            bottom = 20 mm, 
+            left = 30 mm, 
+            right = 30 mm]{geometry}
+\usepackage{indentfirst}
+\setlength{\parindent}{12.5 mm}
+\usepackage{setspace}
+\usepackage{amsmath}
+\setstretch{1}
+\pagestyle{headings}
+
+\begin{document}
+\begin{center}
+{\bf УРАВНЕНИЯ ГИПЕРБОЛИЧЕСКОГО ТИПА}
+\end{center}
+Из уравнения (80) и условий (81) находим:
+$$  X_1(x)=C \sin \frac{\omega}{\alpha} x,\quad X_2(x)=D \sin \frac{\omega}{\alpha} (l-x); $$
+условия сопряжения (82) дают:
+$$ C \sin \frac{\omega}{\alpha} x_0 - D \sin \frac{\omega}{\alpha}(l-x_0)=0,$$
+$$ C  \frac{\omega}{\alpha} \cos \frac{\omega}{\alpha} x_0 - D   \frac{\omega}{\alpha} \cos \frac{\omega}{\alpha}(l-x_0)=\frac{A}{k}.$$
+Определяя отсюда коэффициенты C и D, получаем:
+\begin{equation*}
+u(x,t) = 
+ \begin{cases}
+   u_1=\frac{Aa}{k\omega}\frac{\sin\left(\frac{\omega}{\alpha}(l-x_0)\right)}{\sin\left(\frac{\omega}{\alpha}l\right)}\sin\left(\frac{\omega}{\alpha}x\right)\cos(\omega t), & 0 \leq x \leq x_0, \\
+   u_2=\frac{Aa}{k\omega}\frac{\sin\left(\frac{\omega}{\alpha}x_0\right)}{\sin\left(\frac{\omega}{\alpha}l\right)}\sin\left(\frac{\omega}{\alpha}(l-x)\right)\cos(\omega t), & x_0 \leq x \leq l.
+ \end{cases}
+\end{equation*}
+Аналогично записывается решение при $f(t)=A\sin \omega t$.
+\par Итак, получено решение для случая $f(t)=A\cos \omega t$ или $f(t)=A\sin \omega t$. Если $f(t)$ - переодическая функция, равная 
+$$f(t)=\frac{a_0}{2}+\sum_{n=1}^\infty (\alpha_n\cos\omega nt+ \beta_n\sin\omega nt)$$
+($\omega$ - наименьшая частота), то, очевидно, 
+
+\begin{equation*}
+u(x,t) =  
+ \begin{cases}
+   u_1= \frac{1}{k}\{\frac{\alpha_0 x}{2}(1-\frac{x_0}{l})+\sum_{n=1}^\infty \frac{\alpha\sin\frac{\omega n}{\alpha}(l-x_0)}{\omega n\sin\frac{\omega n}{\alpha}l}\sin\frac{\omega n x}{\alpha}\times \\ \qquad \times(\alpha_n \cos\omega n t+\beta_n \sin\omega n t),\quad 0 \leq x \leq x_0; \\
+   u_2= \frac{1}{k}\{\frac{\alpha_0 x}{2}(1-\frac{x}{l})+\sum_{n=1}^\infty \frac{\alpha\sin\frac{\omega n}{\alpha}x_0}{\omega n\sin\frac{\omega n}{\alpha}l}\sin\frac{\omega n (l-x)}{\alpha}\times\\ \times(\alpha_n \cos\omega n t+\beta_n \sin\omega n t),\quad x_0 \leq x \leq l.
+ \end{cases}\eqno(83)^1)
+\end{equation*}
+
+\underline{\hspace{4cm}}
+
+$^1)$ \textit{Первые слагаемые этих сумм соответствуют стационарному прогибу, определяемому по величине силы $f(t) = a_0/2 = const,$ как нетрудно видеть, функциями:
+\begin{equation*}
+u = 
+ \begin{cases}
+   u_1(x,t)=u_1(x)=\frac{1}{k}\frac{a_0}{2}x(1-\frac{x_0}{l})\quad \text{при} \quad 0 \leq x \leq x_0, \\
+   u_2(x,t)=u_2(x)=\frac{1}{k}\frac{a_0}{2}x_0(1-\frac{x}{l})\quad \text{при} \quad x_0 \leq x \leq l.
+ \end{cases}
+\end{equation*}
+}
+
+
+\begin{center}
+\newpage
+{\bf МЕТОД РАЗДЕЛЕНИЯ ПЕРЕМЕННЫХ}
+\end{center}
+Если функция $f(t)$ непериодическая, то, представляя ее в виде интеграла Фурье, аналогичным методом можно получить реше ние в интегральной форме.
+\par Если знаменатель у этих функций (83) равен нулю
+$$\sin\frac{\omega n l}{\alpha}=0,$$
+$$\omega n=\frac{\pi m}{l}\alpha=\omega_m,$$
+т. е. если спектр частот возбуждающей силы содержит одну из частот собственных колебаний (резонанс), то установившегося решения не существует.
+\par Если точка приложения силы $х_0$ является одним из узлов стоячей волны, соответствующей свободному колебанию с частотой $\omega_m$, то
+$$\sin\frac{\omega_m}{\alpha}x_0=0,$$
+$$\sin\frac{\omega_m}{\alpha}(l-x_0)=0.$$
+При этом числители соответствующих слагаемых для $\upsilon$ обращаются в нуль, и явление резонанса не имеет места. Если же точка приложения силы, действующей с частотой $\omega_m$, является пучностью соответствующей стоячей волны с частотой $\omega_m$, то
+$$\sin\frac{\omega_m}{\alpha}x_0=1,$$
+и явление резонанса будет выражено наиболее резко.
+\par Отсюда следует правило, что для возбуждения резонанса струны при действии на нее сосредоточенной силой надо, чтобы частота ее о была равна одной из собственных частот струны, а точка приложения силы совпадала с одной из пучностей стоячей волны.
+\par \textbf{9. Общая схема метода разделения переменных.} Метод разделения переменных применим не только для уравнения колебаний однородной струны, но и для уравнения колебаний неоднородной струны. Рассмотрим следующую задачу: 
+\par \textit{найти решение уравнения}
+$$L[\upsilon]=\frac{d}{dx}[k(x)\frac{du}{dx}]-q(x)\upsilon=p(x)\frac{d^2u}{dt^2},\quad0<x<l,\quad t>0,\eqno(84)$$
+\textit{удовлетворяющее условиям}
+$$\upsilon(0,t)=0, \qquad \upsilon(l,t)=0, \qquad t \geq 0,\eqno(85)$$
+$$\upsilon(x,0)=\psi(x), \qquad \upsilon_t(x,0)=\psi(x), \qquad 0 \leq x \leq l.\eqno(86)$$
+\end{document}
